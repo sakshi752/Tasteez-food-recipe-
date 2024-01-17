@@ -1,3 +1,4 @@
+const logo=document.querySelector('.logo');
 const recipeContainer = document.querySelector('.recipe-container');
 const searchInput = document.querySelector('.search-input');
 const searchBtn = document.querySelector('.searchBtn');
@@ -7,8 +8,20 @@ const addYourRecipeBtn=document.querySelector('.addYourRecipe')
 const recipeForm=document.querySelector('.recipe-form-container')
 const hr=document.querySelector('hr')
 
+
+logo.addEventListener('click',()=>{
+    recipeForm.style.display="none"
+    hr.style.display="none"
+   recipeContainer.innerHTML=
+   `
+   <h2>Search your fav recipes</h2>
+   `
+})
+
 // fetching recipe on clicking search btn
 const fetchRecipes = async (value) => {
+    recipeForm.style.display="none"
+    hr.style.display="none"
     recipeContainer.innerHTML = "loading recipes..."
     const response = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${value}`);
     const data=await response.json();
