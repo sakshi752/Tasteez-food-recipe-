@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipe app</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/5d20fefed5.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -13,13 +14,34 @@
             <form>
                 <input type="text" placeholder="search your recipes" class="search-input">
                 <button type="submit" class="searchBtn">Search</button>
+                <button type="button" class="addYourRecipe">Your recipe</button>
             </form>
         </nav>
     </header>
     <main>
+        
         <section>
             <div class="recipe-container">
                 <h2>Search your fav recipes</h2>
+            </div>
+            <div class="recipe-details">
+                <button type="button" class="recipe-closeBtn">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <div class="recipe-details-content">
+                    
+                </div>
+            </div>
+            <hr>
+            <div class="recipe-form-container">
+                <h3 class="recipe-title">Add your recipe</h3>
+                <form class="custom-recipe-form">
+                    <input type="text" placeholder="enter recipe name">
+                    <input type="text" placeholder="enter cuisine name">
+                    <input type="text" placeholder="enter category name(eg. breakfast,veg)">
+                    <textarea name="ingredients" id="" cols="30" rows="10" placeholder="enter all ingredients and instructions"></textarea>
+                    <button type="button" class="add-btn">add</button>
+                </form>
             </div>
         </section>
     </main>
