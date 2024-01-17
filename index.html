@@ -35,13 +35,13 @@
             <hr>
             <div class="recipe-form-container">
                 <h3 class="recipe-title">Add your recipe</h3>
-                <form class="custom-recipe-form">
-                    <input type="image" src="" alt="">
-                    <input type="text" placeholder="enter recipe name">
-                    <input type="text" placeholder="enter cuisine name">
-                    <input type="text" placeholder="enter category name(eg. breakfast,veg)">
-                    <textarea name="ingredients" id="" cols="30" rows="10" placeholder="enter all ingredients and instructions"></textarea>
-                    <button type="button" class="add-btn">add</button>
+                <form class="custom-recipe-form" id="recipeForm">
+                    <input type="text" id="recipeImg" placeholder="enter image URL">
+                    <input type="text" id="recipeName" placeholder="enter recipe name">
+                    <input type="text" id="recipeCuisine" placeholder="enter cuisine name">
+                    <input type="text" id="recipeCategory" placeholder="enter category name (e.g., breakfast, veg)">
+                    <textarea id="recipeIngredients" cols="30" rows="10" placeholder="enter all ingredients and instructions"></textarea>
+                    <button type="button" class="add-btn">Add</button>
                 </form>
             </div>
         </section>

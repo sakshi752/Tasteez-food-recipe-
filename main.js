@@ -7,7 +7,7 @@ const recipeCloseBtn=document.querySelector('.recipe-closeBtn');
 const addYourRecipeBtn=document.querySelector('.addYourRecipe')
 const recipeForm=document.querySelector('.recipe-form-container')
 const hr=document.querySelector('hr')
-
+const addBtn=document.querySelector('.add-btn');
 
 logo.addEventListener('click',()=>{
     recipeForm.style.display="none"
@@ -122,10 +122,6 @@ let yourRecipes=[
         recipeIngredient:"",
         recipeInstructions:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, alias dicta ducimus voluptatibus odit fugit quas, earum quasi corrupti pariatur ea possimus debitis magni sint eos quis quia voluptate omnis dolorem accusamus similique ipsum unde ad. Voluptate cupiditate fugiat nemo recusandae ipsam, aliquam obcaecati voluptates quae numquam, nulla id officiis!"
     }
-
-    // {
-
-    // }
 ];
 
 const fetchYourRecipe=()=>{
@@ -171,4 +167,31 @@ const openRecipePopup1=(recipe)=>{
 addYourRecipeBtn.addEventListener('click',()=>{
     
    fetchYourRecipe();
+})
+
+const addRecipe=()=>{
+    const recipeImg = document.getElementById('recipeImg').value;
+        const recipeName = document.getElementById('recipeName').value;
+        const recipeCuisine = document.getElementById('recipeCuisine').value;
+        const recipeCategory = document.getElementById('recipeCategory').value;
+        const recipeIngredients = document.getElementById('recipeIngredients').value;
+
+        // Create a new recipe object
+        const newRecipe = {
+            recipeImg,
+            recipeName,
+            recipeCuisine,
+            recipeCategory,
+            recipeIngredients,
+            recipeInstructions: "You can add instructions here."
+        };
+
+        // Push the new recipe object into the array
+        yourRecipes.push(newRecipe);
+
+        document.getElementById('recipeForm').reset();
+}
+
+addBtn.addEventListener('click',()=>{
+    addRecipe()
 })
